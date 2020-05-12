@@ -4,7 +4,7 @@
 A PowerShell script that can restart specific service(s) locally or remotely.
 The script can also be used to see what services are currently running locally or on a server.
 
-## Prerequistes
+## Prerequisites
 To be able to use this script you must have the following:
 
 1. Administrator privileges in PowerShell.
