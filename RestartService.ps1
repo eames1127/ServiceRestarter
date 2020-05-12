@@ -41,7 +41,7 @@ else
         {
             1 {
                 #example method to restart the printer spooler for Windows on a server.
-                Restart-Service -Name "Spooler" -ComputerName $machine -Force
+                Get-Service -ComputerName $machine -Name "Spooler" | Restart-Service -Verbose
             }
             2{
                 #Add service name here to restart service when an ID of two is sent, be sure to include the machine name.
@@ -49,7 +49,7 @@ else
             88{
                 Write-Host "Please specify the name of the service you want to restart." -ForegroundColor DarkYellow
                 $serviceName = Read-Host
-                Restart-Service -Name $serviceName  -ComputerName $machine -Force
+                Get-Service -ComputerName $machine -Name $serviceName | Restart-Service -Verbose
             } 
             Default {
                 Write-Host "No service ID was specified, showing all running services by default." -ForegroundColor DarkYellow
